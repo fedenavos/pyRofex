@@ -18,7 +18,7 @@ setuptools.setup(
         'requests>=2.20.0',
         'simplejson>=3.10.0',
         'enum34>=1.1.6',
-        'websocket-client>=1.6.4',
+        'websocket-client>=1.0.0',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
