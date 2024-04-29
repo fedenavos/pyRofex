@@ -5,7 +5,7 @@
     All the library exposed functionality
 """
 import logging
-from inspect import getfullargspec
+from inspect import getargs
 
 from .clients.rest_rfx import RestClient
 from .clients.websocket_rfx import WebSocketClient
@@ -964,7 +964,7 @@ def _validate_handler(handler):
         raise ApiException("Handler '{handler}' is not callable.".format(handler=handler))
 
     # Checks if function can receive an argument
-    fun_arg_spec = getfullargspec(handler)
+    fun_arg_spec = getargs(handler)
     if not fun_arg_spec.args and not fun_arg_spec.varargs:
         logging.error("Handler '{handler}' can't receive an argument.".format(handler=handler))
 
