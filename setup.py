@@ -17,7 +17,6 @@ setuptools.setup(
     install_requires=[
         'requests>=2.20.0',
         'simplejson>=3.10.0',
-        'enum34>=1.1.6',
         'websocket-client>=1.0.0',
     ],
     classifiers=[
